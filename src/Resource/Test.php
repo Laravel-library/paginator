@@ -3,13 +3,14 @@
 namespace Xgbnl\Paginator\Resource;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Query\Builder;
+use Xgbnl\Paginator\Resource\Contacts\ResourceCaller;
 
-/**
- * @method static array collection(\Illuminate\Database\Eloquent\Builder|Builder $builder)
- * @method static array resource(Model $model)
- */
-class Test
+class Test implements \Xgbnl\Paginator\Resource\Contacts\Transformer
 {
+    use ResourceInstantiator,ResourceCaller;
 
+    public function transform(Model $model): array
+    {
+        // TODO: Implement transform() method.
+    }
 }
