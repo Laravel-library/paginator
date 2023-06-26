@@ -1,6 +1,6 @@
 <?php
 
-namespace Xgbnl\Paginator\Contacts;
+namespace Xgbnl\Paginator\Pagination\Contacts;
 
 interface Paginator
 {
