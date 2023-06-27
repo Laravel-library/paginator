@@ -1,5 +1,5 @@
 {
-    "name": "Dingo/paginator",
+    "name": "xgbnl/paginator",
     "description": "laravel page turbo.",
     "type": "library",
     "require": {
@@ -8,7 +8,9 @@
     "require-dev": {
         "illuminate/support": "^10.13.5",
         "illuminate/database": "^10.13.5",
-        "illuminate/console": "^10.13.5"
+        "illuminate/console": "^10.13.5",
+        "illuminate/http": "^10.13.5",
+        "illuminate/pagination": "^10.13.5"
     },
     "license": "MIT",
     "autoload": {
