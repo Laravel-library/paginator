@@ -1,10 +1,11 @@
 <?php
 
-namespace Xgbnl\Paginator\Resource\Contacts;
+namespace Dingo\Paginator\Resource;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
-use Xgbnl\Paginator\Resource\Exception\MethodNotExistsException;
+use Dingo\Paginator\Resource\Contacts\Resources;
+use Dingo\Paginator\Resource\Exception\MethodNotExistsException;
 
 /**
  * @method static array collection(\Illuminate\Database\Eloquent\Builder|Builder $builder)
@@ -14,22 +15,19 @@ trait ResourceCaller
 {
     public static function __callStatic(string $name, array $arguments): array
     {
-        $that = new self();
+        $transformResource = self::makeResource();
 
-        if (!$that->hasMethod($name)) {
+        if (!method_exists($transformResource, $name)) {
             throw new MethodNotExistsException('Method [' . $name . '] does not exists.');
         }
 
-        return $that->newResource($that)->{$name}(...$arguments);
+        return $transformResource->{$name}(...$arguments);
     }
 
-    protected function hasMethod(string $name): bool
+    private static function makeResource(): Resources
     {
-        return in_array($name, $this->callMethods());
-    }
+        $that = new self();
 
-    protected function callMethods(): array
-    {
-        return ['collection', 'resource'];
+        return $that->newResource($that);
     }
 }

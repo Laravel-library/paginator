@@ -1,10 +1,10 @@
 <?php
 
-namespace Xgbnl\Paginator;
+namespace Dingo\Paginator;
 
-use Xgbnl\Paginator\Commands\TransformCommand;
-use Xgbnl\Paginator\Resource\Contacts\Resources;
-use Xgbnl\Paginator\Resource\Transformer;
+use Dingo\Paginator\Commands\TransformCommand;
+use Dingo\Paginator\Resource\Contacts\Resources;
+use Dingo\Paginator\Resource\Transformer;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {

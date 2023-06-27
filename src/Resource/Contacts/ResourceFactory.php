@@ -1,6 +1,6 @@
 <?php
 
-namespace Xgbnl\Paginator\Resource\Contacts;
+namespace Dingo\Paginator\Resource\Contacts;
 
 interface ResourceFactory
 {

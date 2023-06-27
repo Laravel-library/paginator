@@ -1,6 +1,6 @@
 <?php
 
-namespace Xgbnl\Paginator\Pagination\Contacts;
+namespace Dingo\Paginator\Pagination\Contacts;
 
 interface Paginator
 {

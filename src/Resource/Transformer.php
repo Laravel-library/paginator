@@ -1,12 +1,12 @@
 <?php
 
-namespace Xgbnl\Paginator\Resource;
+namespace Dingo\Paginator\Resource;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
-use Xgbnl\Paginator\Resource\Contacts\Resources;
-use Xgbnl\Paginator\Resource\Contacts\Transformer as TransformerContact;
+use Dingo\Paginator\Resource\Contacts\Resources;
+use Dingo\Paginator\Resource\Contacts\Transformer as TransformerContact;
 
 readonly class Transformer implements Resources
 {

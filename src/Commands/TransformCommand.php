@@ -1,6 +1,6 @@
 <?php
 
-namespace Xgbnl\Paginator\Commands;
+namespace Dingo\Paginator\Commands;
 
 use Illuminate\Console\Command;
 

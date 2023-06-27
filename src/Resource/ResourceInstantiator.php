@@ -1,12 +1,12 @@
 <?php
 
-namespace Xgbnl\Paginator\Resource;
+namespace Dingo\Paginator\Resource;
 
-use Xgbnl\Paginator\Resource\Contacts\Resources;
+use Dingo\Paginator\Resource\Contacts\Resources;
 
 trait ResourceInstantiator
 {
-    public function newResource(\Xgbnl\Paginator\Resource\Contacts\Transformer $transformer): Resources
+    public function newResource(\Dingo\Paginator\Resource\Contacts\Transformer $transformer): Resources
     {
         return new Transformer($transformer);
     }

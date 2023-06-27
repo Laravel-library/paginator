@@ -1,11 +1,10 @@
 <?php
 
-namespace Xgbnl\Paginator\Resource;
+namespace Dingo\Paginator\Resource;
 
 use Illuminate\Database\Eloquent\Model;
-use Xgbnl\Paginator\Resource\Contacts\ResourceCaller;
 
-class Test implements \Xgbnl\Paginator\Resource\Contacts\Transformer
+class Test implements \Dingo\Paginator\Resource\Contacts\Transformer
 {
     use ResourceInstantiator,ResourceCaller;
 
