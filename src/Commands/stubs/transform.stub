@@ -1,0 +1,17 @@
+<?php
+
+declare(strict_types=1);
+
+namespace DummyNamespace;
+
+use Illuminate\Database\Eloquent\Model;
+
+class DummyClass implements \Dingo\Paginator\Resource\Contacts\Transformer
+{
+    use ResourceInstantiator,ResourceCaller;
+
+    public function transform(Model $model): array
+    {
+        // TODO: Implement transform() method.
+    }
+}

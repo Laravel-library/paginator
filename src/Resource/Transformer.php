@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Dingo\Paginator\Resource;
 
 use Illuminate\Database\Eloquent\Collection;
@@ -24,7 +26,7 @@ readonly class Transformer implements Resources
         return $collections->isEmpty() ? [] : $this->getResources($collections);
     }
 
-    protected function getResources(Collection|\Illuminate\Support\Collection $collection): array
+    public function getResources(Collection|\Illuminate\Support\Collection $collection): array
     {
         return $collection->reduce(function (array $resources, Model $model) {
 
