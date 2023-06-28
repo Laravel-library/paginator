@@ -5,10 +5,12 @@ declare(strict_types=1);
 namespace DummyNamespace;
 
 use Illuminate\Database\Eloquent\Model;
+use Dingo\Paginator\Resource\Contacts\Transformer;
+use Dingo\Paginator\Resource\Contacts\ResourceFactory;
 
-class DummyClass implements \Dingo\Paginator\Resource\Contacts\Transformer
+class DummyClass implements Transformer,ResourceFactory
 {
-    use ResourceInstantiator,ResourceCaller;
+    use ResourceCaller;
 
     public function transform(Model $model): array
     {

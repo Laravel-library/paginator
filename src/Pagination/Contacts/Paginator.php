@@ -2,11 +2,14 @@
 
 namespace Dingo\Paginator\Pagination\Contacts;
 
+use Dingo\Paginator\Resource\Contacts\Transformer;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Contracts\Database\Eloquent\Builder;
+use Illuminate\Contracts\Database\Query\Builder as RawBuilder;
 
 interface Paginator
 {
-    public function paginate(): LengthAwarePaginator;
+    public function paginate(Builder|RawBuilder $builder, Transformer $transformer = null): LengthAwarePaginator;
 
     public function pageName(): string;
 

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
 use Dingo\Paginator\Resource\Contacts\Resources;
 use Dingo\Paginator\Resource\Exception\MethodNotExistsException;
+use Dingo\Paginator\Resource\Contacts\Transformer as TransformerContact;
 
 /**
  * @method static array collection(\Illuminate\Database\Eloquent\Builder|Builder $builder)
@@ -29,5 +30,10 @@ trait ResourceCaller
         $that = new self();
 
         return $that->newResource($that);
+    }
+
+    public function newResource(TransformerContact $transformer): Resources
+    {
+        return new Transformer($transformer);
     }
 }

@@ -7,43 +7,47 @@ namespace Dingo\Paginator\Pagination;
 use Dingo\Paginator\Pagination\Contacts\Paginator;
 use Dingo\Paginator\Resource\Contacts\ResourceFactory;
 use Dingo\Paginator\Resource\Contacts\Transformer;
-use Dingo\Paginator\Resource\ResourceInstantiator;
+use Dingo\Paginator\Resource\ResourceGenerator;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Contracts\Database\Query\Builder as RawBuilder;
+use Illuminate\Contracts\Pagination\CursorPaginator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
-final readonly class CursorPagination implements Paginator, ResourceFactory
+final class CursorPagination implements Paginator
 {
-    use ResourceInstantiator;
 
-    protected Request $request;
+    protected readonly Request $request;
 
-    protected Builder|RawBuilder $builder;
+    protected readonly ResourceGenerator $resourceGenerator;
 
-    protected Transformer $transformer;
+    protected ?CursorPaginator $cursorPaginator = null;
 
-    public function __construct(Request $request, Builder|RawBuilder $builder, Transformer $transformer)
+    public function __construct(Request $request, ResourceFactory $resourceGenerator)
     {
         $this->request = $request;
 
-        $this->builder = $builder;
-
-        $this->transformer = $transformer;
+        $this->resourceGenerator = $resourceGenerator;
     }
 
-    public function paginate(): LengthAwarePaginator
+    public function paginate(Builder|RawBuilder $builder, Transformer $transformer = null): LengthAwarePaginator
     {
-        $page = $this->getPage();
 
-        $perPage = $this->getPerPage();
+        $cursor = $this->prepareCursorPaginator($builder);
 
-        $cursor = $this->builder->cursorPaginate(perPage: $perPage, cursorName: $this->pageName(), cursor: $page);
+        $resources = Collection::make($cursor->items());
 
-        $items = $this->newResource($this->transformer)->getResources(Collection::make($cursor->items()));
+        $items = $this->resourceGenerator->newResource($transformer)->getResources($resources);
 
-        return new BoundaryPaginator($items, $perPage, $page, $this);
+        return new BoundaryPaginator($items, $this->getPerPage(), $this->getPage(), $this);
+    }
+
+    protected function prepareCursorPaginator(Builder|RawBuilder $builder): CursorPaginator
+    {
+        return $this->cursorPaginator = $builder->cursorPaginate(
+            perPage: $this->getPerPage(), cursorName: $this->pageName(), cursor: $this->getPage()
+        );
     }
 
     protected function getPage(): mixed
