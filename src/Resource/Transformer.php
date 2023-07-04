@@ -40,4 +40,9 @@ readonly class Transformer implements Resources
     {
         return $this->transformer->transform($model);
     }
+
+    public function extra(array $values): Resources
+    {
+        // TODO: Implement extra() method.
+    }
 }

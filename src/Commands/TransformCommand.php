@@ -6,15 +6,13 @@ use Illuminate\Console\Command;
 
 class TransformCommand extends Command
 {
-    protected $signature = 'make:transform';
+    protected $signature = 'make:transformer';
 
-    protected $description = 'Create a new transform.';
-
-    protected string $type = 'Transform';
+    protected $description = 'Create a new transformer.';
 
     protected function getStub(): string
     {
-        return __DIR__ . '/stubs/transform.stub';
+        return __DIR__ . '/stubs/transformer.stub';
     }
 
     protected function getDefaultNamespace($rootNamespace): string

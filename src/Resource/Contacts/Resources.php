@@ -13,4 +13,6 @@ interface Resources
     public function getResources(Collection|\Illuminate\Support\Collection $collection): array;
 
     public function resource(Model $model): array;
+
+    public function extra(array $values): self;
 }
