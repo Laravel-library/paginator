@@ -20,7 +20,7 @@ readonly class CustomPaginate implements Contacts\Paginator
 
     public function paginate(RawBuilder|Builder $builder, Transformer $transformer = null): LengthAwarePaginator
     {
-        // TODO: Implement paginate() method.
+
     }
 
     public function pageName(): string

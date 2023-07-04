@@ -2,14 +2,14 @@
 
 namespace Dingo\Paginator;
 
-use Dingo\Paginator\Commands\TransformCommand;
+use Dingo\Paginator\Commands\TransformerCommand;
 use Dingo\Paginator\Resource\Contacts\Resources;
 use Dingo\Paginator\Resource\ResourceProcessor;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     protected array $commands = [
-        TransformCommand::class,
+        TransformerCommand::class,
     ];
 
 

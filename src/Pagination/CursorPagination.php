@@ -36,6 +36,7 @@ final class CursorPagination implements Paginator
 
         $cursor = $this->prepareCursorPaginator($builder);
 
+
         $resources = Collection::make($cursor->items());
 
         $items = $this->resourceGenerator->newResource($transformer)->getResources($resources);

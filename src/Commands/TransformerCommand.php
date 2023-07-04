@@ -4,7 +4,7 @@ namespace Dingo\Paginator\Commands;
 
 use Illuminate\Console\Command;
 
-class TransformCommand extends Command
+class TransformerCommand extends Command
 {
     protected $signature = 'make:transformer';
 

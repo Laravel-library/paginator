@@ -2,17 +2,16 @@
 
 namespace Dingo\Paginator\Resource\Contacts;
 
+use Dingo\Paginator\Contacts\Extractable;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
 
-interface Resources
+interface Resources extends Extractable
 {
     public function collection(Builder|\Illuminate\Database\Eloquent\Builder $builder): array;
 
     public function getResources(Collection|\Illuminate\Support\Collection $collection): array;
 
     public function resource(Model $model): array;
-
-    public function extra(array $values): self;
 }

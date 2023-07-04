@@ -2,11 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Dingo\Paginator\Resource;
+namespace Dingo\Paginator\Special;
 
+use Dingo\Paginator\Resource\Contacts;
 use Illuminate\Database\Eloquent\Model;
 
-class SpecialTransformer implements Contacts\Transformer
+final readonly class SpecialTransformer implements Contacts\Transformer
 {
 
     public function transform(Model $model): array

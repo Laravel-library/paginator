@@ -8,7 +8,9 @@ use Illuminate\Contracts\Database\Query\Builder as RawBuilder;
 
 interface Pagination
 {
-    public function customPaginate(Builder|RawBuilder $builder, Transformer $transformer = null): Paginator;
+    public function customPaginate(Builder|RawBuilder $builder, Transformer $transformer = null): array;
 
-    public function cursorPaginate(Builder|RawBuilder $builder, Transformer $transformer = null, array $columns = ['*']): Paginator;
+    public function cursorPaginate(Builder|RawBuilder $builder, Transformer $transformer = null): array;
+
+    public function extra(array $values): self;
 }
