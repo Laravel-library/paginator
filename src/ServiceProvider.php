@@ -4,7 +4,7 @@ namespace Dingo\Paginator;
 
 use Dingo\Paginator\Commands\TransformCommand;
 use Dingo\Paginator\Resource\Contacts\Resources;
-use Dingo\Paginator\Resource\Transformer;
+use Dingo\Paginator\Resource\ResourceProcessor;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {

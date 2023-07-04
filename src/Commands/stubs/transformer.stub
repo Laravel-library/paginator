@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Dingo\Paginator\Resource\Contacts\Transformer;
 use Dingo\Paginator\Resource\Contacts\ResourceFactory;
 
-class DummyClass implements Transformer,ResourceFactory
+class DummyClass implements Transformer
 {
     use ResourceCaller;
 

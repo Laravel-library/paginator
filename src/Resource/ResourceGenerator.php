@@ -11,7 +11,7 @@ readonly class ResourceGenerator implements ResourceFactory
 
     public function newResource(?Transformer $transformer): Resources
     {
-        return new \Dingo\Paginator\Resource\Transformer($this->prepareTransformer($transformer));
+        return new \Dingo\Paginator\Resource\ResourceProcessor($this->prepareTransformer($transformer));
     }
 
     protected function prepareTransformer(?Transformer $transformer): Transformer
