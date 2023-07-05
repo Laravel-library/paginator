@@ -26,12 +26,12 @@ final readonly class Pagination implements Contacts\Pagination
         $this->state = $state;
     }
 
-    public function customPaginate(RawBuilder|Builder $builder, Transformer $transformer = null): array
+    public function customPaginate(RawBuilder|Builder $builder, Transformer $transformer ): array
     {
 
     }
 
-    public function cursorPaginate(RawBuilder|Builder $builder, Transformer $transformer = null): array
+    public function cursorPaginate(RawBuilder|Builder $builder, Transformer $transformer): array
     {
 
     }
@@ -41,5 +41,15 @@ final readonly class Pagination implements Contacts\Pagination
         $this->state->store($values);
 
         return $this;
+    }
+
+    public function page(): string
+    {
+        return 'page';
+    }
+
+    public function perPage(): string
+    {
+        return 'perPage';
     }
 }

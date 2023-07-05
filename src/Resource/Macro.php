@@ -12,11 +12,11 @@ use Dingo\Paginator\Resource\Exception\MethodNotExistsException;
  * @method static array resource(Model $model)
  * @method static Resources extra(array $values)
  */
-trait ResourceCaller
+trait Macro
 {
     public static function __callStatic(string $name, array $arguments): array
     {
-        $transformResource = (new ResourceGenerator())->newResource(new self());
+        $transformResource = (new ResourceGenerator())->makeResource(new self());
 
         if (!method_exists($transformResource, $name)) {
             throw new MethodNotExistsException('Method [' . $name . '] does not exists.');

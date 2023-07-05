@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Dingo\Paginator\Special;
+namespace Dingo\Paginator\Edge;
 
 use Dingo\Paginator\Resource\Contacts;
 use Illuminate\Database\Eloquent\Model;
