@@ -5,7 +5,6 @@ namespace Dingo\Paginator\Resource;
 use Dingo\Paginator\Resource\Contacts\ResourceFactory;
 use Dingo\Paginator\Resource\Contacts\Resources;
 use Dingo\Paginator\Resource\Contacts\Transformer;
-use Dingo\Paginator\Edge\SpecialTransformer;
 use Dingo\Paginator\State\DataAccess;
 
 readonly class ResourceGenerator implements ResourceFactory
@@ -18,6 +17,6 @@ readonly class ResourceGenerator implements ResourceFactory
 
     protected function prepareTransformer(?Transformer $transformer): Transformer
     {
-        return is_null($transformer) ? new SpecialTransformer() : $transformer;
+        return is_null($transformer) ? new AnonymousTransformer() : $transformer;
     }
 }
