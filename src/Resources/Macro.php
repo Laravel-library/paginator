@@ -1,11 +1,11 @@
 <?php
 
-namespace Dingo\Paginator\Resource;
+namespace Dingo\Paginator\Resources;
 
-use Dingo\Paginator\Resource\Contacts\Resources;
+use Dingo\Paginator\Resources\Contacts\Resources;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
-use Dingo\Paginator\Resource\Exception\MethodNotExistsException;
+use Dingo\Paginator\Resources\Exception\MethodNotExistsException;
 
 /**
  * @method static array collection(\Illuminate\Database\Eloquent\Builder|Builder $builder)

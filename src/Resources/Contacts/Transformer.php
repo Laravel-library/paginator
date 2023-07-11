@@ -1,6 +1,6 @@
 <?php
 
-namespace Dingo\Paginator\Resource\Contacts;
+namespace Dingo\Paginator\Resources\Contacts;
 
 use Illuminate\Database\Eloquent\Model;
 

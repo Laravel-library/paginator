@@ -2,7 +2,7 @@
 
 namespace Dingo\Paginator\Pagination\Contacts;
 
-use Dingo\Paginator\Resource\Contacts\Transformer;
+use Dingo\Paginator\Resources\Contacts\Transformer;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Contracts\Database\Query\Builder as RawBuilder;
 

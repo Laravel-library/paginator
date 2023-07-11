@@ -2,8 +2,8 @@
 
 namespace Dingo\Paginator\Pagination;
 
-use Dingo\Paginator\Resource\Contacts\ResourceFactory;
-use Dingo\Paginator\Resource\Contacts\Transformer;
+use Dingo\Paginator\Resources\Contacts\ResourceFactory;
+use Dingo\Paginator\Resources\Contacts\Transformer;
 use Dingo\Paginator\State\Contacts\State;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Contracts\Database\Query\Builder as RawBuilder;

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Dingo\Paginator\Resource;
+namespace Dingo\Paginator\Resources;
 
-use Dingo\Paginator\Resource\Contacts\Transformer;
+use Dingo\Paginator\Resources\Contacts\Transformer;
 use Illuminate\Database\Eloquent\Model;
 
 final readonly class AnonymousTransformer implements Transformer

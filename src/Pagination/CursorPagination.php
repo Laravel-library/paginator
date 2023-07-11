@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace Dingo\Paginator\Pagination;
 
 use Dingo\Paginator\Pagination\Contacts\Paginator;
-use Dingo\Paginator\Resource\Contacts\ResourceFactory;
-use Dingo\Paginator\Resource\Contacts\Transformer;
-use Dingo\Paginator\Resource\ResourceGenerator;
+use Dingo\Paginator\Resources\Contacts\ResourceFactory;
+use Dingo\Paginator\Resources\Contacts\Transformer;
+use Dingo\Paginator\Resources\ResourceGenerator;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Contracts\Database\Query\Builder as RawBuilder;
 use Illuminate\Contracts\Pagination\CursorPaginator;

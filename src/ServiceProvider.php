@@ -3,8 +3,8 @@
 namespace Dingo\Paginator;
 
 use Dingo\Paginator\Commands\TransformerCommand;
-use Dingo\Paginator\Resource\Contacts\Resources;
-use Dingo\Paginator\Resource\ResourceProcessor;
+use Dingo\Paginator\Resources\Contacts\Resources;
+use Dingo\Paginator\Resources\ResourceProcessor;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {

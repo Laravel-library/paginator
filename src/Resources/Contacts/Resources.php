@@ -1,6 +1,6 @@
 <?php
 
-namespace Dingo\Paginator\Resource\Contacts;
+namespace Dingo\Paginator\Resources\Contacts;
 
 use Dingo\Paginator\Contacts\Extractable;
 use Illuminate\Database\Eloquent\Collection;

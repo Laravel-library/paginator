@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Dingo\Paginator\Resource;
+namespace Dingo\Paginator\Resources;
 
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
 use Dingo\Paginator\State\Contacts\State;
-use Dingo\Paginator\Resource\Contacts\Resources;
-use Dingo\Paginator\Resource\Contacts\Transformer;
+use Dingo\Paginator\Resources\Contacts\Resources;
+use Dingo\Paginator\Resources\Contacts\Transformer;
 
 final readonly class ResourceProcessor implements Resources
 {

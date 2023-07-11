@@ -1,6 +1,6 @@
 <?php
 
-namespace Dingo\Paginator\Resource\Exception;
+namespace Dingo\Paginator\Resources\Exception;
 
 class MethodNotExistsException extends \RuntimeException
 {

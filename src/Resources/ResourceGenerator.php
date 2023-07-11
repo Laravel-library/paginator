@@ -1,10 +1,10 @@
 <?php
 
-namespace Dingo\Paginator\Resource;
+namespace Dingo\Paginator\Resources;
 
-use Dingo\Paginator\Resource\Contacts\ResourceFactory;
-use Dingo\Paginator\Resource\Contacts\Resources;
-use Dingo\Paginator\Resource\Contacts\Transformer;
+use Dingo\Paginator\Resources\Contacts\ResourceFactory;
+use Dingo\Paginator\Resources\Contacts\Resources;
+use Dingo\Paginator\Resources\Contacts\Transformer;
 use Dingo\Paginator\State\DataAccess;
 
 readonly class ResourceGenerator implements ResourceFactory
