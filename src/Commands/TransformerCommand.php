@@ -2,9 +2,9 @@
 
 namespace Dingo\Paginator\Commands;
 
-use Illuminate\Console\Command;
+use Illuminate\Console\GeneratorCommand;
 
-class TransformerCommand extends Command
+class TransformerCommand extends GeneratorCommand
 {
     protected $signature = 'make:transformer';
 
