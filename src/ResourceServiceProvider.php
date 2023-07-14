@@ -6,7 +6,7 @@ use Dingo\Paginator\Commands\TransformerCommand;
 use Dingo\Paginator\Resources\Contacts\Resources;
 use Dingo\Paginator\Resources\ResourceProcessor;
 
-class ServiceProvider extends \Illuminate\Support\ServiceProvider
+class ResourceServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     protected array $commands = [
         TransformerCommand::class,
