@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Dingo\Paginator\Pagination;
+namespace Elephant\Transformers\Pagination;
 
-use Dingo\Paginator\Pagination\Contacts\Paginator;
+use Elephant\Transformers\Pagination\Contacts\Paginator;
 use Illuminate\Pagination\LengthAwarePaginator;
 
 final class BoundaryPaginator extends LengthAwarePaginator

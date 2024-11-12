@@ -1,8 +1,8 @@
 <?php
 
-namespace Dingo\Paginator\Resources\Contacts;
+namespace Elephant\Transformers\Contracts;
 
-use Dingo\Paginator\Contacts\Extractable;
+use Elephant\Transformers\Contacts\Extractable;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;

@@ -1,10 +1,10 @@
 <?php
 
-namespace Dingo\Paginator\Pagination;
+namespace Elephant\Transformers\Pagination;
 
-use Dingo\Paginator\Resources\Contacts\ResourceFactory;
-use Dingo\Paginator\Resources\Contacts\Transformer;
-use Dingo\Paginator\State\Contacts\State;
+use Elephant\Transformers\Contracts\ResourceFactory;
+use Elephant\Transformers\Contracts\Transformer;
+use Elephant\Transformers\State\Contacts\State;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Contracts\Database\Query\Builder as RawBuilder;
 use Illuminate\Http\Request;

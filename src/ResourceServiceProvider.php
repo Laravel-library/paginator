@@ -1,12 +1,11 @@
 <?php
 
-namespace Dingo\Paginator;
+namespace Elephant\Transformers;
 
-use Dingo\Paginator\Commands\TransformerCommand;
-use Dingo\Paginator\Resources\Contacts\Resources;
-use Dingo\Paginator\Resources\ResourceProcessor;
+use Elephant\Transformers\Commands\TransformerCommand;
+use Illuminate\Support\ServiceProvider;
 
-class ResourceServiceProvider extends \Illuminate\Support\ServiceProvider
+class ResourceServiceProvider extends ServiceProvider
 {
     protected array $commands = [
         TransformerCommand::class,

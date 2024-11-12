@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace DummyNamespace;
 
 use Illuminate\Database\Eloquent\Model;
-use Dingo\Paginator\Resource\Macro;
-use Dingo\Paginator\Resources\Contacts\Transformer;
-use Dingo\Paginator\Resources\Contacts\ResourceFactory;
+use Elephant\Transformers\Resource\Macro;
+use Elephant\Transformers\Resources\Contacts\Transformer;
+use Elephant\Transformers\Resources\Contacts\ResourceFactory;
 
 class DummyClass implements Transformer
 {

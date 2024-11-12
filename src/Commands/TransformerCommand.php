@@ -1,6 +1,6 @@
 <?php
 
-namespace Dingo\Paginator\Commands;
+namespace Elephant\Transformers\Commands;
 
 use Illuminate\Console\GeneratorCommand;
 

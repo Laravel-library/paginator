@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Dingo\Paginator\Resources;
+namespace Elephant\Transformers;
 
+use Elephant\Transformers\Contracts\Resources;
+use Elephant\Transformers\Contracts\Transformer;
+use Elephant\Transformers\State\Contacts\State;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
-use Dingo\Paginator\State\Contacts\State;
-use Dingo\Paginator\Resources\Contacts\Resources;
-use Dingo\Paginator\Resources\Contacts\Transformer;
 
 final readonly class ResourceProcessor implements Resources
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Dingo\Paginator\Contacts;
+namespace Elephant\Transformers\Contacts;
 
 interface Extractable
 {

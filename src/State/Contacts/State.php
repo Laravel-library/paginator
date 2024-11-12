@@ -1,6 +1,6 @@
 <?php
 
-namespace Dingo\Paginator\State\Contacts;
+namespace Elephant\Transformers\State\Contacts;
 
 interface State
 {

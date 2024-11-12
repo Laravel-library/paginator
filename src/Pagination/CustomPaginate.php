@@ -1,8 +1,8 @@
 <?php
 
-namespace Dingo\Paginator\Pagination;
+namespace Elephant\Transformers\Pagination;
 
-use Dingo\Paginator\Resources\Contacts\Transformer;
+use Elephant\Transformers\Contracts\Transformer;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Contracts\Database\Query\Builder as RawBuilder;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
@@ -25,12 +25,12 @@ readonly class CustomPaginate implements Contacts\Paginator
 
     public function pageName(): string
     {
-        // TODO: Implement pageName() method.
+
     }
 
     public function perPageName(): string
     {
-        // TODO: Implement perPageName() method.
+
     }
 
     public function meta(): array

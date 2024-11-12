@@ -1,21 +1,19 @@
 {
-  "name": "xgbnl/paginator",
-  "description": "laravel page turbo.",
+  "name": "xgbnl/transform",
+  "description": "Laravel custom paginator",
   "type": "library",
   "require": {
-    "php": "^8.2"
-  },
-  "require-dev": {
-    "illuminate/support": "^10.13.5",
-    "illuminate/database": "^10.13.5",
-    "illuminate/console": "^10.13.5",
-    "illuminate/http": "^10.13.5",
-    "illuminate/pagination": "^10.13.5"
+    "php": "^8.3",
+    "illuminate/support": "^11.30.0",
+    "illuminate/database": "^11.30.0",
+    "illuminate/console": "^11.30.0",
+    "illuminate/http": "^11.30.0",
+    "illuminate/pagination": "^11.30.0"
   },
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Dingo\\Paginator\\": "src/"
+      "Elephant\\Transformers\\": "src/"
     }
   },
   "autoload-dev": {

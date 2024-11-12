@@ -1,8 +1,8 @@
 <?php
 
-namespace Dingo\Paginator\State;
+namespace Elephant\Transformers\State;
 
-use Dingo\Paginator\State\Contacts\State;
+use Elephant\Transformers\State\Contacts\State;
 
 final class DataAccess implements State
 {

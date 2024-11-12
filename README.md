@@ -2,5 +2,5 @@
 
 #### install 
 ```shell
-composer require xgbnl/paginator
+composer require xgbnl/transform dev-main
 ```

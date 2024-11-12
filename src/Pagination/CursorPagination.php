@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Dingo\Paginator\Pagination;
+namespace Elephant\Transformers\Pagination;
 
-use Dingo\Paginator\Pagination\Contacts\Paginator;
-use Dingo\Paginator\Resources\Contacts\ResourceFactory;
-use Dingo\Paginator\Resources\Contacts\Transformer;
-use Dingo\Paginator\Resources\ResourceGenerator;
+use Elephant\Transformers\Contracts\ResourceFactory;
+use Elephant\Transformers\Contracts\Transformer;
+use Elephant\Transformers\Pagination\Contacts\Paginator;
+use Elephant\Transformers\ResourceGenerator;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Contracts\Database\Query\Builder as RawBuilder;
 use Illuminate\Contracts\Pagination\CursorPaginator;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
-use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 
 final class CursorPagination implements Paginator
 {
@@ -33,9 +33,7 @@ final class CursorPagination implements Paginator
 
     public function paginate(Builder|RawBuilder $builder, Transformer $transformer = null): LengthAwarePaginator
     {
-
         $cursor = $this->prepareCursorPaginator($builder);
-
 
         $resources = Collection::make($cursor->items());
 

@@ -1,11 +1,11 @@
 <?php
 
-namespace Dingo\Paginator\Resources;
+namespace Elephant\Transformers;
 
-use Dingo\Paginator\Resources\Contacts\ResourceFactory;
-use Dingo\Paginator\Resources\Contacts\Resources;
-use Dingo\Paginator\Resources\Contacts\Transformer;
-use Dingo\Paginator\State\DataAccess;
+use Elephant\Transformers\Contracts\ResourceFactory;
+use Elephant\Transformers\Contracts\Resources;
+use Elephant\Transformers\Contracts\Transformer;
+use Elephant\Transformers\State\DataAccess;
 
 readonly class ResourceGenerator implements ResourceFactory
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Dingo\Paginator\Pagination\Contacts;
+namespace Elephant\Transformers\Pagination\Contacts;
 
-use Dingo\Paginator\Resources\Contacts\Transformer;
+use Elephant\Transformers\Contracts\Transformer;
 use Illuminate\Contracts\Database\Eloquent\Builder;
 use Illuminate\Contracts\Database\Query\Builder as RawBuilder;
 
